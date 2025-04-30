@@ -31,3 +31,42 @@ main {
   max-width: 90%;
   margin: 1.2rem auto;
 }
+
+.task {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.priority {
+  padding: 0.3rem 1.2rem;
+  border-radius: 100vw;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.high-priority {
+  background-color: red;
+}
+.medium-priority {
+  background-color: #ffff00;
+}
+.low-priority {
+  background-color: #90ee90;
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.task-description {
+  line-height: 1.2;
+  color: #444;
+}
+
+.task-completed {
+  color: #777;
+  text-decoration: line-through;
+}

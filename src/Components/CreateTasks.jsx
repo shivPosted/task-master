@@ -22,6 +22,7 @@ function CreateTasks({ handleNewTask }) {
       title,
       description,
       completed: false,
+      priority: "low",
     };
 
     handleNewTask(newTask);
