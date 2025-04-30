@@ -32,6 +32,10 @@ function App() {
     setTasks(modifiedTasks);
   }
 
+  function handleDeleteTask(id) {
+    setTasks((cur) => cur.filter((task) => task.id !== id));
+  }
+
   return (
     <main>
       <Header />
@@ -39,6 +43,7 @@ function App() {
       <AllTasks
         tasks={tasks}
         handleTaskCompletedToggle={handleTaskCompletedToggle}
+        handleDeleteTask={handleDeleteTask}
       />
     </main>
   );

@@ -14,6 +14,12 @@ function CreateTasks({ handleNewTask }) {
       .reduce((accum, descriptionWord) => (accum += descriptionWord[0]), "");
     return titleId + descriptionId;
   }
+  function resetForm(form) {
+    const titleInput = form.querySelector(".title-input");
+    const descriptionInput = form.querySelector(".description-input");
+    titleInput.blur();
+    descriptionInput.blur();
+  }
   function handleSubmit(e) {
     e.preventDefault();
     if (!title || !description) return null;
@@ -26,6 +32,7 @@ function CreateTasks({ handleNewTask }) {
     };
 
     handleNewTask(newTask);
+    resetForm(e.target);
     setTitle("");
     setDescription("");
   }
@@ -35,13 +42,16 @@ function CreateTasks({ handleNewTask }) {
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        className="title-input"
       />
       <input
         id=""
+        type="text"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        className="description-input"
       />
-      <Button>Add Task</Button>
+      <Button className={"add-task-btn"}>Add Task</Button>
     </form>
   );
 }

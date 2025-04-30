@@ -1,4 +1,8 @@
-function Button({ handleClick = () => {}, children }) {
-  return <button onClick={handleClick}>{children}</button>;
+function Button({ handleClick = () => {}, children, className }) {
+  return (
+    <button className={className} onClick={handleClick}>
+      {children}
+    </button>
+  );
 }
 export default Button;

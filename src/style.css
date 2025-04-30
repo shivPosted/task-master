@@ -32,6 +32,38 @@ main {
   margin: 1.2rem auto;
 }
 
+.create-tasks {
+  display: flex;
+  margin-block: 3.2rem;
+  justify-content: center;
+  gap: 1.2rem;
+  align-items: center;
+  height: 2.4rem;
+}
+
+.add-task-btn {
+  background-color: paleturquoise;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #222;
+  font-size: 1rem;
+  height: 2.4rem;
+}
+input[type="text"] {
+  font-size: 1.2rem;
+  outline: none;
+  border: 2px solid paleturquoise;
+  height: 100%;
+  color: #8cbebe;
+}
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+}
 .task {
   display: flex;
   gap: 1.2rem;
@@ -40,10 +72,12 @@ main {
 }
 
 .priority {
-  padding: 0.3rem 1.2rem;
+  padding: 0.2rem;
   border-radius: 100vw;
+  text-align: center;
   color: white;
   font-weight: 700;
+  font-size: 0.6rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -57,16 +91,55 @@ main {
   background-color: #90ee90;
 }
 
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
 .task-title {
   font-size: 1.2rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 .task-description {
+  font-size: 1.2rem;
+  font-size: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   line-height: 1.2;
-  color: #444;
+  color: #777;
 }
 
 .task-completed {
   color: #777;
   text-decoration: line-through;
+}
+input[type="checkbox"] {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.delete-task-btn {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 1.2rem;
+  color: #777;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.delete-task-btn:hover {
+  background-color: red;
+  color: white;
 }
